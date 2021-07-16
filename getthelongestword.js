@@ -3,7 +3,9 @@ function findLongestWordLength(str) {
     let emptyStr = ""
 
       for (let i = 0; i < array.length; i++) {
+        
         let words = array[i]
+
           if (words.length > emptyStr.length) {
             emptyStr = words
         }
