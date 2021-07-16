@@ -10,6 +10,4 @@ function myFactor() {
    console.log(`The factorial of ${myArr[i]} is ${factor}`)
  }
 }
-
-
 myFactor()
