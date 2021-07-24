@@ -3,7 +3,7 @@ function quickCheck(arr, elem) {
     if (arr.indexOf(elem) == -1) {
         return false
     }
-    return true
+    return truecdc
 }
 console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'))
 console.log(quickCheck(["squash", "onions", "shallots"], "celery"))
