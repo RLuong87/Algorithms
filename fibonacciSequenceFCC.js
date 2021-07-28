@@ -1,5 +1,5 @@
 
-// Fibonacci Sequence coding challenege with our instructor Gabe(CareerDevs)
+// Fibonacci Sequence Java challenege with our instructor Gabe(CareerDevs) 
 
 public int fib(int pos) {
 
