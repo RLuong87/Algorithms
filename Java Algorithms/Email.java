@@ -14,7 +14,6 @@ import java.util.Scanner;
 public class Email {
     private String firstName;
     private String lastName;
-    private String rented;
     private String password;
     private String department;
     private int mailboxCapacity;
@@ -23,19 +22,19 @@ public class Email {
     public Email(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        System.out.println("Customer Name: " + this.firstName + " " + this.lastName);
+        System.out.println("EMAIL CREATED: " + this.firstName + " " + this.lastName + "\n");
 
-        this.rented = setRented();
-        System.out.println("Rented: " + this.rented);
+        this.department = setDepartment();
+        System.out.println("Department: " + this.department);
     }
 
-    private String setRented() {
-        System.out.println("Rent a Car");
-        System.out.print("1) Honda Accord\n2) Toyota Camry\n0) None\nSelection: ");
+    private String setDepartment() {
+        System.out.print("1) Marketing\n2) Production\n3) Sales\n0) None\nChoose Department: ");
         Scanner scan = new Scanner(System.in);
         int choice = scan.nextInt();
-        if (choice == 1) {return "Honda Accord";}
-        else if (choice == 2) {return "Toyota Camry";}
+        if (choice == 1) {return "Marketing";}
+        else if (choice == 2) {return "Production";}
+        else if (choice == 3) {return "Sales";}
         else {return "";}
     }
 }
