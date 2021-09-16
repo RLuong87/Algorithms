@@ -42,17 +42,5 @@ public class ChangeLetter {
         for (int i = 0; i < newStr.length; i++) {
 
         }
-
-
-//        System.out.println(chars);
-
-        String myString = "This is String example.";
-        char[] myCharArray = myString.toCharArray();
-        for(int i = 0; i < myString.length(); i++){
-            // Print each sequential character on the same line
-            System.out.print(myCharArray[i]);
-        }
-        // Print a newline
-        System.out.println();
     }
 }
