@@ -26,12 +26,13 @@ public class FixBasicCalculator {
     'x' is not an operator
  */
     public static Object basicCalculator(int a, char o, int b) {
-        int result = 0;
 
         if (o == '+') return a + b;
         if (o == '-') return a - b;
         if (o == '/' && b == 0) {
             return null;
+        } else if (o == '/') {
+            return a / b;
         }
         if (o == '*') {
             return a * b;
@@ -41,6 +42,6 @@ public class FixBasicCalculator {
     }
 
     public static void main(String[] args) {
-        System.out.println(basicCalculator(12, '/', 4));
+        System.out.println(basicCalculator(3, '*', 4));
     }
 }
