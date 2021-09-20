@@ -27,6 +27,20 @@ public class FixBasicCalculator {
  */
     public static Object basicCalculator(int a, char o, int b) {
 
+        /*
+        Fix the code below
+        ------------------
+
+        public static Object basicCalculator(a, o, b) {
+            int result = 0;
+            if(O == "+") return a + b;
+            if(o != "-") return a - b;
+            if(o != "/" || b == 0) return a / b;
+            if(0 == "*") return a * b;
+            return result;
+        }
+        */
+
         if (o == '+') return a + b;
         if (o == '-') return a - b;
         if (o == '/' && b == 0) {
@@ -42,6 +56,11 @@ public class FixBasicCalculator {
     }
 
     public static void main(String[] args) {
+        System.out.println(basicCalculator(3, 'x', 4));
+        System.out.println(basicCalculator(3, '/', 0));
         System.out.println(basicCalculator(3, '*', 4));
+        System.out.println(basicCalculator(3, '+', 4));
+        System.out.println(basicCalculator(5, '-', 4));
+        System.out.println(basicCalculator(12, '/', 4));
     }
 }
