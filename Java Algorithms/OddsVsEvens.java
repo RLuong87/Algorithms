@@ -1,8 +1,5 @@
 package com.company;
 
-import java.util.Arrays;
-import java.util.Spliterator;
-
 public class OddsVsEvens {
 
     /*
@@ -26,21 +23,65 @@ public class OddsVsEvens {
 
     public static String oddsVsEvens(int num) {
 
+        int evenSum = 0, oddSum = 0;
 
+        String valueNum = String.valueOf(num);
+        String[] digits = valueNum.split("(?<=.)");
 
-        return "";
+        for (String digit : digits) {
+            int numbers = Integer.parseInt(digit);
+
+            if (numbers % 2 == 0) {
+                evenSum += numbers;
+            } else {
+                oddSum += numbers;
+            }
+        }
+        if (evenSum > oddSum) {
+            return "even";
+        } else if (oddSum > evenSum) {
+            return "odd";
+        } else {
+            return "equal";
+        }
     }
 
     public static void main(String[] args) {
 
-//        System.out.println(oddsVsEvens(97428));
-
-        int[] numbers = new int[1];
-        numbers[0] = 97428;
+        System.out.println(oddsVsEvens(97428));
 
 
-        System.out.println(Arrays.toString(numbers));
+//        int number = 97428;
+//
+//        while (number > 0) {
+//
+//            System.out.print(number % 10 + " ");
+//            number = number / 10;
+//        }
 
+        int num = 54870, evenSum = 0, oddSum = 0;
 
+        String numberVal = String.valueOf(num);
+
+        String[] digits = numberVal.split("(?<=.)");
+
+        for (String digit : digits) {
+            int numbers = Integer.parseInt(digit);
+
+            if (numbers % 2 == 0) {
+                evenSum += numbers;
+            } else {
+                oddSum += numbers;
+            }
+        }
+
+        if (evenSum > oddSum) {
+            System.out.println("even");
+        } else if (oddSum > evenSum) {
+            System.out.println("odd");
+        } else {
+            System.out.println("equal");
+        }
     }
 }
+
