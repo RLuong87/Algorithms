@@ -19,12 +19,29 @@ public class FindLargestNums {
     findLargestNums([[0.4321, 0.7634, 0.652], [1.324, 9.32, 2.5423, 6.4314], [9, 3, 6, 3]]) ➞ [0.7634, 9.32, 9]
     */
 
-    public static int[] findLargestNums(double[][] arr) {
+    public static double[] findLargestNums(double[][] arr) {
 
+        List<Double> largeNumbers = new ArrayList<>();
+
+        for (double[] n : arr) {
+            int num = (int) n[0];
+
+            for (double i : n) {
+
+                if (i > num) {
+                    num = (int) i;
+                }
+            }
+            largeNumbers.add((double) num);
+        }
+        System.out.println(largeNumbers);
         return null;
     }
 
     public static void main(String[] args) {
+
+        double[][] doubleNumbers = {{4, 2, 7, 1}, {20, 70, 40, 90}, {1, 2, 0}};
+        System.out.println(Arrays.toString(findLargestNums(doubleNumbers)));
 
         // Create a list to place the biggest numbers when found
         List<Integer> largestNumbers = new ArrayList<>();
@@ -36,11 +53,11 @@ public class FindLargestNums {
             // Store first numbers from each array in a variable
             int numCheck = number[0];
 
-            // Nested for each loops to access each element in each of the sub arrays
+            // Iterate the arrays again to access each element in each array
             for (int num : number) {
                 // Compare each number to the first number that is stored in numCheck
                 if (num > numCheck) {
-                    // Make numCheck equal to each large number found
+                    // Make numCheck equal to each biggest number found
                     numCheck = num;
                 }
             }
