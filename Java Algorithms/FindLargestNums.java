@@ -21,21 +21,22 @@ public class FindLargestNums {
 
     public static double[] findLargestNums(double[][] arr) {
 
-        List<Double> largeNumbers = new ArrayList<>();
+        List<Integer> largeNumbers = new ArrayList<>();
+        double[] digits = new double[0];
 
-        for (double[] n : arr) {
-            int num = (int) n[0];
+        for (double[] numbers : arr) {
+            double numCheck = numbers[0];
 
-            for (double i : n) {
+            for (double num : numbers) {
 
-                if (i > num) {
-                    num = (int) i;
+                if (num > numCheck) {
+                    numCheck = num;
                 }
             }
-            largeNumbers.add((double) num);
+            largeNumbers.add((int) numCheck);
         }
         System.out.println(largeNumbers);
-        return null;
+        return digits;
     }
 
     public static void main(String[] args) {
