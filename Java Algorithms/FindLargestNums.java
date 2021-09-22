@@ -27,19 +27,25 @@ public class FindLargestNums {
     public static void main(String[] args) {
 
         // Create a list to place the biggest numbers when found
-        List<Integer> biggestNumbers = new ArrayList<>();
+        List<Integer> largestNumbers = new ArrayList<>();
         int[][] numbers = {{4, 2, 7, 1}, {20, 70, 40, 90}, {1, 2, 0}};
 
+        // Iterate through the arrays
         for (int[] number : numbers) {
+            // Store first numbers from each array in a variable
             int numCheck = number[0];
 
+            // Iterate the arrays again to access each element in each array
             for (int num : number) {
+                // Compare each number to the first number that is stored in numCheck
                 if (num > numCheck) {
+                    // Make numCheck equal to each biggest number found
                     numCheck = num;
                 }
             }
-            biggestNumbers.add(numCheck);
+            // Add the largest numbers to the array list
+            largestNumbers.add(numCheck);
         }
-        System.out.println(biggestNumbers);
+        System.out.println(largestNumbers);
     }
 }
