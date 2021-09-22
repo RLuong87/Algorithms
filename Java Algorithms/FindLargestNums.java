@@ -28,9 +28,10 @@ public class FindLargestNums {
 
         // Create a list to place the biggest numbers when found
         List<Integer> largestNumbers = new ArrayList<>();
+        // Loop through this 2d array
         int[][] numbers = {{4, 2, 7, 1}, {20, 70, 40, 90}, {1, 2, 0}};
 
-        // Iterate through the arrays
+        // Iterate through the sub arrays
         for (int[] number : numbers) {
             // Store first numbers from each array in a variable
             int numCheck = number[0];
