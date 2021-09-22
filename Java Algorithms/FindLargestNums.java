@@ -36,11 +36,11 @@ public class FindLargestNums {
             // Store first numbers from each array in a variable
             int numCheck = number[0];
 
-            // Iterate the arrays again to access each element in each array
+            // Nested for each loops to access each element in each of the sub arrays
             for (int num : number) {
                 // Compare each number to the first number that is stored in numCheck
                 if (num > numCheck) {
-                    // Make numCheck equal to each biggest number found
+                    // Make numCheck equal to each large number found
                     numCheck = num;
                 }
             }
