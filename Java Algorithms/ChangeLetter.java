@@ -24,7 +24,7 @@ public class ChangeLetter {
         char[] chars = word.toCharArray(); // Convert the string into a char array
         StringBuilder str = new StringBuilder(); // Use String builder to concatenate the new string
         int num = 1; // Initialize a variable and set it to 1
-        // Based on the ASCII chart, we can add or subtract a number to a character,
+        // Based off the ASCII chart, we can add or subtract a number to a character,
         // and it'll return any character that is before or after the original character
 
         for (int i = 0; i < chars.length; i++) { // Loop through the chars array
