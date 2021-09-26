@@ -3,6 +3,7 @@ package com.company;
 public class CarriageCapacity {
 
     /*
+    
     Edabit Challenge
 
     A train has a maximum capacity of n passengers overall, which means each carriage's capacity will share an equal proportion of the maximum capacity.
