@@ -45,6 +45,5 @@ public class SameParity {
         System.out.println(parityAnalysis(243));
         System.out.println(parityAnalysis(12));
         System.out.println(parityAnalysis(3));
-
     }
 }
