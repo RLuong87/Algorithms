@@ -45,6 +45,5 @@ public class OddishOrEvenish {
         System.out.println(oddishOrEvenish(43));
         System.out.println(oddishOrEvenish(373));
         System.out.println(oddishOrEvenish(4433));
-
     }
 }
