@@ -1,10 +1,14 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class PuzzlePieces {
 
     /*
+    Edabit Challenge
+
     Write a function that takes two arrays and adds the first element in the first array with the first element in the second array,
     the second element in the first array with the second element in the second array, etc., etc.
     Return true if all element combinations add up to the same number. Otherwise, return false.
@@ -23,19 +27,37 @@ public class PuzzlePieces {
 
     public static boolean puzzlePieces(int[][] n) {
 
+        for (int i = 0; i < n.length; i++) {
+
+        }
         return true;
     }
 
     public static void main(String[] args) {
 
-        int[][] numbers = { { 1, 2, 3, 4 }, { 4, 3, 2, 1 } };
+        List<Integer> numArray = new ArrayList<>();
+        int[][] numbers = {{1, 2, 3, 4}, {4, 3, 2, 1}};
+        boolean sum = true;
+        int[] num1 = new int[0];
+        int[] num2 = new int[0];
+        int[] numTotal = new int[0];
 
         for (int i = 0; i < numbers.length; i++) {
-            System.out.println(Arrays.toString(new int[]{numbers[i][0]}));
+            num1 = numbers[0];
+            num2 = numbers[1];
+//            System.out.println(Arrays.toString(num1));
+//            System.out.println(Arrays.toString(num2));
+//            System.out.println((Arrays.toString(num1) + Arrays.toString(num2)));
+        }
+//        System.out.println(Arrays.toString(num1) + " " + Arrays.toString(num2));
+        for (int i = 0; i < num1.length; i++) {
 
-            for (int j = 0; j < numbers.length; j++) {
-                System.out.println(Arrays.deepToString(new int[][]{numbers[j]}));
-            }
+            numArray.add(num1[i] + num2[i]);
+        }
+        System.out.println(numArray);
+
+        for (Integer integer : numArray) {
+            System.out.println(integer);
         }
     }
 }
