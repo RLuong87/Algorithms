@@ -25,15 +25,15 @@ public class FirstVowels {
 
     public static String firstNVowels(String str, int n) {
 
-        String vowel = "aeiou";
-        char[] chars = str.toCharArray(); // Look at each string
-        String vow = "";
+        String[] newStr = str.split("");
 
-        for (int i = 0; i < n; i++) {
+        StringBuilder vow = new StringBuilder();
 
-            if (chars.length == n && chars.length == vowel.length()) {
-                vow += chars[i];
-                return vow;
+        for (String s : newStr) {
+            char chars = s.charAt(0);
+
+            if (chars == 'a' || chars == 'e' || chars == 'i' || chars == 'o' || chars == 'u') {
+                vow.append(s);
             }
         }
         return "invalid";
@@ -41,7 +41,8 @@ public class FirstVowels {
 
     public static void main(String[] args) {
 
-//        System.out.println(firstNVowels("sharpening skills", 3));
+        System.out.println(firstNVowels("major league", 3));
+
 //        String[] vowArray = vowel.split("");
 //        char[] chars = str.toCharArray();
 //        System.out.println(Arrays.toString(chars));
