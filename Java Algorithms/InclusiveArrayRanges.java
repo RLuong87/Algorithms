@@ -1,9 +1,11 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class InclusiveArrayRanges {
 
     /*
-    Edabit Challenges
+    Edabit Challenges (Not completed)
 
     Write a function that, given the start startNum and end endNum values, return an array containing all the numbers inclusive to that range.
     See examples below.
@@ -22,18 +24,31 @@ public class InclusiveArrayRanges {
     If startNum is greater than endNum, return an array with the higher value. See example #4.
     */
 
-    public static int[] inclusiveArray(int startNum,int endNum) {
+    public static int[] inclusiveArray(int startNum, int endNum) {
 
+        int[] nums = new int[startNum + endNum];
 
-        return null;
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = i;
+        }
+        return nums;
     }
 
     public static void main(String[] args) {
 
-        int[] inNums = { 1, 5 };
+        System.out.println(Arrays.toString(inclusiveArray(1, 5)));
+        System.out.println(Arrays.toString(inclusiveArray(2, 8)));
+        System.out.println(Arrays.toString(inclusiveArray(10, 20)));
 
-        for (int i = 0; i < inNums.length; i++) {
-            System.out.println(inNums[0] + inNums[1] + " " + (i + 1));
+        int[] inNums = {1, 5};
+
+        int startNum = 3;
+        int endNum = 10;
+
+        int[] numbers = new int[startNum + endNum];
+        for (int i = startNum; i < endNum; i++) {
+            numbers[i] = i;
+//            System.out.println(numbers[i]);
         }
     }
 }
