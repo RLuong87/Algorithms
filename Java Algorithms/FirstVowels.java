@@ -42,26 +42,28 @@ public class FirstVowels {
     public static void main(String[] args) {
 
 //        System.out.println(firstNVowels("sharpening skills", 3));
-        int num = 5;
-        String vowel = "aeiou";
-        String str = "sharpening skills";
-        String[] vowArray = vowel.split("");
-        String[] newStr = str.split(" ");
+//        String[] vowArray = vowel.split("");
+//        char[] chars = str.toCharArray();
+//        System.out.println(Arrays.toString(chars));
+//        System.out.println(Arrays.toString(newStr));
+//        System.out.println(Arrays.toString(vowArray));
 
-        for (int i = 0; i < newStr.length; i++) {
-            char chars = newStr[i].charAt(i);
+        char num = 3;
+//        String str = "sharpening skills";
+        String str = "major league";
+        String[] newStr = str.split("");
 
-            if (chars == 'a') {
-                newStr[i] = newStr[i].substring(0, num);
-            }
-        }
         StringBuilder vow = new StringBuilder();
 
         for (String s : newStr) {
-            vow.append(s);
+            char chars = s.charAt(0);
+
+            if (chars == 'a' || chars == 'e' || chars == 'i' || chars == 'o' || chars == 'u') {
+                vow.append(s);
+                num++;
+            }
         }
         System.out.println(vow);
-        System.out.println(Arrays.toString(vowArray));
-        System.out.println(Arrays.toString(newStr));
+        System.out.println(num);
     }
 }
