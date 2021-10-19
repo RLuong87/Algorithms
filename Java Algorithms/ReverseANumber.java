@@ -26,13 +26,16 @@ public class ReverseANumber {
 
     public static void main(String[] args) {
 
-        String number = "1215";
-        String strNum = "";
+        String number = "-122157";
+        StringBuilder strNum = new StringBuilder();
         String[] numArr = number.split("");
+        int num = Integer.parseInt(number);
 
-        for (int i = numArr.length - 1; i >= 0; i++) {
-            strNum += numArr[i];
+        for (int i = numArr.length - 1; i >= 0; i--) {
+            strNum.append(numArr[i]);
         }
         System.out.println(strNum);
+        System.out.println(num);
+        System.out.println(20 * 365);
     }
 }
