@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class DoubleLetters {
 
     /*
-    Edabit Challenge
+    Edabit Challenge ATTN: (This is not a working solution!!)
 
     Create a function that takes a word and returns true if the word has two consecutive identical letters.
 
