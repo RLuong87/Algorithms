@@ -26,12 +26,12 @@ public class InclusiveArrayRanges {
 
     public static int[] inclusiveArray(int startNum, int endNum) {
 
-        int[] nums = new int[startNum + endNum];
+        int[] numbers = new int[startNum + endNum];
 
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] = i;
+        for (int i = startNum; i <= endNum; i++) {
+            numbers[i] = i;
         }
-        return nums;
+        return numbers;
     }
 
     public static void main(String[] args) {
@@ -40,15 +40,17 @@ public class InclusiveArrayRanges {
         System.out.println(Arrays.toString(inclusiveArray(2, 8)));
         System.out.println(Arrays.toString(inclusiveArray(10, 20)));
 
+//        int[] myArray = IntStream.range(indexLow, length).toArray();
+
         int[] inNums = {1, 5};
 
         int startNum = 3;
         int endNum = 10;
 
         int[] numbers = new int[startNum + endNum];
-        for (int i = startNum; i < endNum; i++) {
+        for (int i = startNum; i <= endNum; i++) {
             numbers[i] = i;
-//            System.out.println(numbers[i]);
+            System.out.println(numbers[i]);
         }
     }
 }
