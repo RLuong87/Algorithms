@@ -1,9 +1,5 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class FirstVowels {
 
     /*
@@ -25,23 +21,30 @@ public class FirstVowels {
 
     public static String firstNVowels(String str, int n) {
 
-        String[] newStr = str.split("");
+        String firstVowels = "", vows = "";
 
-        StringBuilder vow = new StringBuilder();
-
-        for (String s : newStr) {
-            char chars = s.charAt(0);
-
-            if (chars == 'a' || chars == 'e' || chars == 'i' || chars == 'o' || chars == 'u') {
-                vow.append(s);
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u') {
+                firstVowels += str.charAt(i);
             }
         }
-        return "invalid";
+        for (int j = 0; j < n; j++) {
+
+            if (n > firstVowels.length()) {
+                return "invalid";
+            } else {
+                vows += firstVowels.charAt(j);
+            }
+        }
+        return vows;
     }
 
     public static void main(String[] args) {
 
-        System.out.println(firstNVowels("major league", 3));
+        System.out.println(firstNVowels("sharpening skills", 3));
+        System.out.println(firstNVowels("major league", 5));
+        System.out.println(firstNVowels("hostess", 5));
+
 
 //        String[] vowArray = vowel.split("");
 //        char[] chars = str.toCharArray();
@@ -64,7 +67,7 @@ public class FirstVowels {
                 num++;
             }
         }
-        System.out.println(vow);
-        System.out.println(num);
+//        System.out.println(vow);
+//        System.out.println(num);
     }
 }
