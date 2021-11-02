@@ -21,14 +21,12 @@ public class ReverseTheNumber {
 
     public static String rev(int n) {
 
-        String strNum = String.valueOf(n); // Converting the int to a string using valueOf() method
-        strNum = strNum.replaceAll("-", ""); // replaceAll() method to replace all dashes present
-        String[] numArr = strNum.split(""); // Convert the string to a string array
+        String strNum = String.valueOf(Math.abs(n)); // Converting the int to a string using valueOf() method
         String revNum = ""; // Empty string to concatenate the new string
 
         // Reverse for loop to start at the end of the string array
-        for (int i = numArr.length - 1; i >= 0; i--) {
-            revNum += numArr[i]; // Concatenate each element into a new string
+        for (int i = strNum.length() - 1; i >= 0; i--) {
+            revNum += strNum.charAt(i); // Concatenate each element into a new string
         }
         return revNum;
     }

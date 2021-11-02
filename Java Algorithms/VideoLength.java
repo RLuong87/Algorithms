@@ -25,70 +25,25 @@ public class VideoLength {
 
     public static int minutesToSeconds(String tm) {
 
-        String fm = tm.replaceAll("\\D+", ""); // This will ignore the colon with regex and take just the numbers
-        String[] numArr = fm.split(""); // Split the string of numbers
+        //String fm = tm.replaceAll("\\D+", ""); // This will ignore the colon with regex and take just the numbers
+        String[] numArr = tm.split(":"); // Split the string of numbers
+        int[] newNums = new int[2];
+        int convertedNums = 0;
 
-        String[] num1 = new String[2]; // To hold the first two numbers of the string, which represents the minutes
-        num1[0] = numArr[0];
-        num1[1] = numArr[1];
-
-        String[] num2 = new String[2]; // Holds the remaining two numbers which represents the seconds
-        num2[0] = numArr[2];
-        num2[1] = numArr[3];
-
-        String num1Str = "";
-        String num2Str = "";
-
-        for (int i = 0; i < 2; i++) {
-            num1Str += num1[i]; // Combines the minutes in a new string
-            num2Str += num2[i]; // Combines the seconds in a new string
-        }
-
-        int seconds = Integer.parseInt(num2Str); // Parse the minutes
-        int minutes = Integer.parseInt(num1Str); // Parse the seconds
-        int mToS = (minutes * 60) + seconds;
-
-        for (int i = 0; i < seconds; i++) {
-            if (seconds >= 60) {
+        for (int i = 0; i < numArr.length; i++) {
+            newNums[i] = Integer.parseInt(numArr[i]);
+            if (newNums[1] >= 60) {
                 return -1;
+            } else {
+                convertedNums = (newNums[0] * 60) + newNums[1];
             }
         }
-        return mToS;
+        return convertedNums;
     }
 
     public static void main(String[] args) {
         System.out.println(minutesToSeconds("13:56"));
         System.out.println(minutesToSeconds("01:00"));
         System.out.println(minutesToSeconds("10:60"));
-//        System.out.println(13 * 60);
-//        System.out.println(780 + 56);
-
-//        Using regex to get just the integers from a string (replaceAll) method
-//        regex:
-//        "\\D+", replacement:empty string
-        String s = "01:00";
-        s = s.replaceAll("\\D+", "");
-        String[] numArr = s.split("");
-
-        String[] num1 = new String[2];
-        num1[0] = numArr[0];
-        num1[1] = numArr[1];
-
-        String[] num2 = new String[2];
-        num2[0] = numArr[2];
-        num2[1] = numArr[3];
-
-        String num1Str = "";
-        String num2Str = "";
-
-        for (int i = 0; i < num1.length; i++) {
-            num1Str += num1[i];
-            num2Str += num2[i];
-        }
-        int seconds = Integer.parseInt(num2Str);
-        int x = Integer.parseInt(num1Str);
-        int minutes = (x * 60);
-
-//        System.out.println(minutes + seconds);
     }
 }
