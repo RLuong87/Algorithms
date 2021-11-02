@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.HashMap;
 
 public class DoubleLetters {
 
@@ -21,8 +20,9 @@ public class DoubleLetters {
 
     public static boolean doubleLetters(String word) {
 
-        for (int i = 0; i < word.length(); i++) {
-            if (word.charAt(0) == word.charAt(i)) {
+        for (int i = 0; i < word.length() - 1; i++) {
+
+            if (word.charAt(i) == word.charAt(i + 1)) {
                 return true;
             }
         }
@@ -35,20 +35,5 @@ public class DoubleLetters {
         System.out.println(doubleLetters("yummy"));
         System.out.println(doubleLetters("orange"));
         System.out.println(doubleLetters("munchkin"));
-
-        String word = "yummy";
-        int length = word.length();
-
-        boolean repeat = false;
-        boolean noRepeat = true;
-
-        for (int i = 0; i < word.length(); i++) {
-
-            for (int j = 0; j < word.length(); j++) {
-
-//                System.out.println(word.charAt(i) == word.charAt(j));
-            }
-        }
-//        System.out.println(length);
     }
 }
