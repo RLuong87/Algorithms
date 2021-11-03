@@ -33,25 +33,35 @@ public class LargestGap {
      */
 
     public static int largestGap(int[] numbers) {
+        int largestGap = 0;
+        Arrays.sort(numbers); // sort the array in ascending order
 
-        Arrays.sort(numbers);
-
-        System.out.println(Arrays.toString(numbers));
-
-
-        return 0;
+        for (int i = 0; i < numbers.length - 1; i++) {
+            int gap = numbers[i + 1] - numbers[i]; // Subtract the number that's before each number
+            if (gap > largestGap) { // check which sum is the largest
+                largestGap = gap; // store the largest sum
+            }
+        }
+        return largestGap;
     }
 
     public static void main(String[] args) {
 
         System.out.println(largestGap(new int[]{9, 4, 26, 26, 0, 0, 5, 20, 6, 25, 5}));
+        System.out.println(largestGap(new int[]{14, 13, 7, 1, 4, 12, 3, 7, 7, 12, 11, 5, 7}));
+        System.out.println(largestGap(new int[]{13, 3, 8, 5, 5, 2, 13, 6, 14, 2, 11, 4, 10, 8, 1, 9}));
 
         int[] numbers = {9, 4, 26, 26, 0, 0, 5, 20, 6, 25, 5};
         Arrays.sort(numbers);
+        System.out.println(Arrays.toString(numbers));
+        int largestGap = 0;
 
-        for (int i = 0; i < numbers.length; i++) {
-            System.out.println(numbers[i]);
+        for (int i = 0; i < numbers.length - 1; i++) {
+            int gap = (numbers[i + 1] - numbers[i]);
+            if (gap > largestGap) {
+                largestGap = gap;
+            }
         }
-
+//        System.out.println(largestGap);
     }
 }
