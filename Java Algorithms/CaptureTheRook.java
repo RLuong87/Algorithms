@@ -23,7 +23,6 @@ public class CaptureTheRook {
      */
 
     public static boolean canCapture(String[] rooks) {
-
         // if the first character in the first string is equal to the first character in the second string
         // or if the second character in the first string is equal to the second character in the second string
         // if any of these conditionals equal to true then return true
