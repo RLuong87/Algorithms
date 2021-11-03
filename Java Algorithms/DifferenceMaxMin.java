@@ -1,11 +1,9 @@
 package com.company;
 
-import java.util.Arrays;
-
 public class DifferenceMaxMin {
 
     /*
-    Edabit Challenge
+    Edabit Challenge https://edabit.com/challenge/hymPkXdhmDQLe87QT
 
     Create a function that takes an array and returns the difference between the biggest and smallest numbers.
 
@@ -20,6 +18,7 @@ public class DifferenceMaxMin {
     public static int differenceMaxMin(int[] arr) {
 
         int biggest = 0, smallest = 0, difference = 0;
+
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > biggest) {
                 biggest = arr[i];

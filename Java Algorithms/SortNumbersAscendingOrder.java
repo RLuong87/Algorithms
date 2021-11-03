@@ -6,7 +6,7 @@ import java.util.Collections;
 public class SortNumbersAscendingOrder {
 
     /*
-    Edabit Challenge
+    Edabit Challenge https://edabit.com/challenge/WM5s7vuHnXdcKCEjS
 
     Create a method that takes an array of integers and returns a new array, sorted in ascending order (smallest to biggest).
 
@@ -30,18 +30,26 @@ public class SortNumbersAscendingOrder {
         Arrays.sort(nums);
 
         for (int i = 0; i < nums.length; i++) {
-            sortedNumbers = nums;
+
+            if (nums.length != 0) {
+                sortedNumbers = nums;
+                return new int[0];
+            }
         }
         return sortedNumbers;
     }
 
     public static void main(String[] args) {
 
-        int[] newArr = {};
-        int[] x = {80, 29, 4, -95, -24, 85};
-        System.out.println(Arrays.toString(sortNumsAscending(x)));
+        int[] emptyArray = {};
+        int[] sortArray = {1, 2, 10, 50, 5};
+        int[] sortArray2 = {80, 29, 4, -95, -24, 85};
+        System.out.println(Arrays.toString((emptyArray)));
+        System.out.println(Arrays.toString(sortNumsAscending(emptyArray)));
+        System.out.println(Arrays.toString(sortNumsAscending(sortArray)));
+        System.out.println(Arrays.toString(sortNumsAscending(sortArray2)));
 
-        Arrays.sort(x);
+        Arrays.sort(sortArray2);
 //        System.out.println(Arrays.toString(x));
     }
 }

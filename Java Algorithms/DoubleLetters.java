@@ -4,7 +4,7 @@ package com.company;
 public class DoubleLetters {
 
     /*
-    Edabit Challenge ATTN: (This is not a working solution!!)
+    Edabit Challenge https://edabit.com/challenge/EaWY5d2pYBckrkAnS
 
     Create a function that takes a word and returns true if the word has two consecutive identical letters.
 

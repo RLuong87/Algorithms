@@ -3,7 +3,7 @@ package com.company;
 public class HowManyVowels {
 
     /*
-    Edabit Challenge
+    Edabit Challenge https://edabit.com/challenge/GBKphScsmDi9ek3ra
 
     Create a function that takes a string and returns the number (count) of vowels contained within it.
 

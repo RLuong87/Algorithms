@@ -3,6 +3,8 @@ package com.company;
 public class RockPaperScissors {
 
     /*
+    Edabit Challenge https://edabit.com/challenge/3S8XppR6Yf5mXPxij
+
     Create a function which simulates the game "rock, paper, scissors".
     The function takes the input of both players (rock, paper or scissors), first parameter from first player, second from second player.
     The function returns the result as such:

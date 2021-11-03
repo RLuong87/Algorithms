@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class VideoLength {
 
     /*
-    Edabit Challenge
+    Edabit Challenge https://edabit.com/challenge/9D39q2q9yAFCDM9da
 
     You are given the length of a video in minutes. The format is mm:ss (e.g.: "02:54").
     Create a function that takes the video length and return it in seconds.
