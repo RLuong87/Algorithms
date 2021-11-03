@@ -39,7 +39,7 @@ public class DisariumNumber {
         ArrayList<Integer> numsArr = new ArrayList<>();
         String strNumArr = String.valueOf(n);
         String[] numStr = strNumArr.split("");
-        int numPow, num = 0;
+        int numPow;
 
         for (String s : numStr) {
             numsList.add(Integer.parseInt(s));
@@ -48,14 +48,8 @@ public class DisariumNumber {
             numPow = (int) Math.pow(numsList.get(i), i + 1);
             numsArr.add(numPow);
         }
-        for (Integer integer : numsArr) {
-            num += integer;
-
-            if (num == n) {
-                return true;
-            }
-        }
-        return false;
+        int sum = numsArr.stream().mapToInt(i -> i).sum(); // Using stream to get the sum
+        return sum == n;
     }
 
     public static void main(String[] args) {
