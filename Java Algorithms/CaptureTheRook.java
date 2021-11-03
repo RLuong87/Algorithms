@@ -24,15 +24,10 @@ public class CaptureTheRook {
 
     public static boolean canCapture(String[] rooks) {
 
-        for (int i = 0; i < rooks.length; i++) {
-            // if the first character in the first string is equal to the first character in the second string
-            // or if the second character in the first string is equal to the second character in the second string
-            // if any of these conditionals equal to true then return true
-            if (rooks[0].charAt(0) == rooks[1].charAt(0) || rooks[0].charAt(1) == rooks[1].charAt(1)) {
-                return true;
-            }
-        }
-        return false;
+        // if the first character in the first string is equal to the first character in the second string
+        // or if the second character in the first string is equal to the second character in the second string
+        // if any of these conditionals equal to true then return true
+        return rooks[0].charAt(0) == rooks[1].charAt(0) || rooks[0].charAt(1) == rooks[1].charAt(1);
     }
 
     public static void main(String[] args) {
