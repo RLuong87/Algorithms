@@ -42,7 +42,7 @@ public class DisariumNumber {
         int numPow;
 
         for (String s : numStr) { // iterate through the array of substrings
-            numsList.add(Integer.parseInt(s)); // Parse the substrings to an integer
+            numsList.add(Integer.parseInt(s)); // Parse the substrings to an integer and add to an arraylist
         }
         for (int i = 0; i < numsList.size(); i++) {
             numPow = (int) Math.pow(numsList.get(i), i + 1); // Store the sum of integers to a variable
