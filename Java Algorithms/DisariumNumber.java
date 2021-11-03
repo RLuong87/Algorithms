@@ -37,16 +37,16 @@ public class DisariumNumber {
 
         ArrayList<Integer> numsList = new ArrayList<>();
         ArrayList<Integer> numsArr = new ArrayList<>();
-        String strNumArr = String.valueOf(n);
-        String[] numStr = strNumArr.split("");
+        String strNumArr = String.valueOf(n); // convert the number to a string
+        String[] numStr = strNumArr.split(""); // split the string
         int numPow;
 
-        for (String s : numStr) {
-            numsList.add(Integer.parseInt(s));
+        for (String s : numStr) { // iterate through the array of substrings
+            numsList.add(Integer.parseInt(s)); // Parse the substrings to an integer
         }
         for (int i = 0; i < numsList.size(); i++) {
-            numPow = (int) Math.pow(numsList.get(i), i + 1);
-            numsArr.add(numPow);
+            numPow = (int) Math.pow(numsList.get(i), i + 1); // Store the sum of integers to a variable
+            numsArr.add(numPow); // Add to arraylist
         }
         int sum = numsArr.stream().mapToInt(i -> i).sum(); // Using stream to get the sum
         return sum == n;
