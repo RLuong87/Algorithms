@@ -6,9 +6,6 @@ import java.util.Objects;
 public class RecursionArraySum {
 
     /*
-    Edabit Challenge
-    https://edabit.com/challenge/hf2THAoQRQbAx2jc9
-
     Write a function that finds the sum of an array. Make your function recursive.
 
     Examples:
