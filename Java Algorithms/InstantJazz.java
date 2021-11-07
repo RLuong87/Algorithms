@@ -27,41 +27,25 @@ public class InstantJazz {
 
     public static String[] jazzify(String[] arr) {
 
-        String[] addSeven = new String[arr.length];
         for (int i = 0; i < arr.length; i++) {
 
             if (arr[i].matches(".*\\d.*")) {
                 return arr;
             }
             if (!arr[i].matches(".*\\d.*")) {
-                arr[i] += 7;
+                arr[i] += "7";
+            } else {
+                return new String[0];
             }
-            return arr;
         }
-        return new String[0];
+        return arr;
     }
 
     public static void main(String[] args) {
 
         String[] strings = {"F7", "E7", "A7", "Ab7", "Gm7", "C7"};
         System.out.println(Arrays.toString(jazzify(strings)));
-        System.out.println(Arrays.toString(jazzify(new String[]{"G", "F", "C"})));
-
-//        String[] strings = {"F7", "E7", "A7", "Ab7", "Gm7", "C7"};
-//        System.out.println(Arrays.toString(jazzify(strings)));
-
-        List<String> jazzSeven = new ArrayList<>();
-        String addSeven = "7";
-
-        for (int i = 0; i < strings.length; i++) {
-
-            if (Objects.equals(strings[i], "7")) {
-                System.out.println(jazzSeven);
-            } else {
-                strings[i] += addSeven;
-                jazzSeven.add(strings[i]);
-            }
-        }
-//        System.out.println(jazzSeven);
+        System.out.println(Arrays.toString(jazzify(new String[]{"G", "F", "C", "E", "N", "Q"})));
+        System.out.println(Arrays.toString(jazzify(new String[0])));
     }
 }
