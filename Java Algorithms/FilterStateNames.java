@@ -1,5 +1,9 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class FilterStateNames {
 
     /*
@@ -27,15 +31,29 @@ public class FilterStateNames {
 
     public static String[] filterStateNames(String[] arr, String type) {
 
+
         return null;
 
     }
 
     public static void main(String[] args) {
 
+        ArrayList<String> full = new ArrayList<>();
+        ArrayList<String> abb = new ArrayList<>();
+
         String[] states = {"Arizona", "CA", "NY", "Nevada"};
+        String type = "full", type2 = "abb";
+        String[] arrStates;
 
-
-
+        for (String state : states) {
+            if (type.length() < state.length()) {
+                full.add(state);
+                arrStates = new String[]{state};
+            } else if (state.length() < type2.length()) {
+                abb.add(state);
+            }
+        }
+        System.out.println(full);
+        System.out.println(abb);
     }
 }
