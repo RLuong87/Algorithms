@@ -38,13 +38,10 @@ public class Pythagorean {
     public static boolean isTriplet(int a, int b, int c) {
 
         int[] numbers = new int[]{a, b, c};
-        int pow = 0, numPow = 0;
         Arrays.sort(numbers);
 
-        for (int i = 0; i < numbers.length; i++) {
-            pow = (int) Math.pow(numbers[0], 2) + (int) Math.pow(numbers[1], 2);
-            numPow = (int) Math.pow(numbers[2], 2);
-        }
+        int pow = (int) Math.pow(numbers[0], 2) + (int) Math.pow(numbers[1], 2), numPow = (int) Math.pow(numbers[2], 2);
+
         return pow == numPow;
     }
 
