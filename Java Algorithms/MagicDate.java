@@ -31,7 +31,7 @@ public class MagicDate {
     public static boolean magic(String str) {
 
         int n;
-        String[] strNumbers = str.split("");
+        String[] strNumbers = str.split(" ");
         int[] numbers = new int[strNumbers.length];
 
         for (int i = 0; i < strNumbers.length; i++) {
@@ -49,14 +49,14 @@ public class MagicDate {
 
     public static void main(String[] args) {
 
-        System.out.println(magic("112011"));
-        System.out.println(magic("412001"));
-        System.out.println(magic("522010"));
-        System.out.println(magic("922011"));
+        System.out.println(magic("1 1 2011"));
+        System.out.println(magic("4 1 2001"));
+        System.out.println(magic("5 2 2010"));
+        System.out.println(magic("9 2 2011"));
 
-        String str = "922011";
-        String[] strNumbers = str.split("");
         int n;
+        String str = "9 2 2011";
+        String[] strNumbers = str.split(" ");
         int[] numbers = new int[strNumbers.length];
 
         for (int i = 0; i < strNumbers.length; i++) {
