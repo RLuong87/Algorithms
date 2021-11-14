@@ -30,20 +30,49 @@ public class MagicDate {
 
     public static boolean magic(String str) {
 
+        int n;
+        String[] strNumbers = str.split("");
+        int[] numbers = new int[strNumbers.length];
 
-        return true;
+        for (int i = 0; i < strNumbers.length; i++) {
+            n = Integer.parseInt(strNumbers[i]);
+            numbers[i] = n;
+        }
+        int sum = numbers[0] * numbers[1];
+
+        String morph = "", formed = String.valueOf(sum);
+        for (int i = 0; i < numbers.length; i++) {
+            morph += String.valueOf(numbers[i]);
+        }
+        return morph.endsWith(formed);
     }
 
     public static void main(String[] args) {
 
-        String str = "112011";
+        System.out.println(magic("112011"));
+        System.out.println(magic("412001"));
+        System.out.println(magic("522010"));
+        System.out.println(magic("922011"));
+
+        String str = "922011";
         String[] strNumbers = str.split("");
         int n;
-        int[] numbers = new int[0];
+        int[] numbers = new int[strNumbers.length];
 
         for (int i = 0; i < strNumbers.length; i++) {
             n = Integer.parseInt(strNumbers[i]);
-            numbers = new int[]{i};
+            numbers[i] = n;
         }
+        int sum = numbers[0] * numbers[1];
+
+        String morph = "";
+        for (int i = 0; i < numbers.length; i++) {
+            morph += String.valueOf(numbers[i]);
+
+        }
+//        String formed = String.valueOf(sum);
+//        System.out.println(formed);
+//        System.out.println(morph);
+//        System.out.println(morph.endsWith(formed));
     }
 }
