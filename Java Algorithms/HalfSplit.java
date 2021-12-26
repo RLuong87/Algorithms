@@ -38,7 +38,10 @@ public class HalfSplit {
         int number = 25;
 
         for (int i = 0; i < number; i++) {
-            
+
+            if (number == Integer.sum(i, i + 1)) {
+                nums[i] = i;
+            }
         }
         System.out.println(Arrays.toString(nums));
     }
