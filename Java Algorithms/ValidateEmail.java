@@ -3,7 +3,8 @@ package com.company;
 public class ValidateEmail {
 
     /*
-    Create a function that accepts a string, checks if it's a valid email address and returns either true or false, depending on the evaluation.
+    Create a function that accepts a string, checks if it's a valid email address and returns either true or false,
+    depending on the evaluation.
 
     The string must contain an @ character.
     The string must contain a . character.
@@ -41,12 +42,18 @@ public class ValidateEmail {
         String email = "hello@edabit.com";
         boolean isEmail = false;
 
+        if (email.contains(".") && email.contains("@")) {
+            System.out.println("The string contains . and @");
+        } else {
+            System.out.println("The string does not contain a .");
+        }
+
         for (int i = 0; i < email.length() - 1; i++) {
 
             if (email.contains(".") && email.contains("@") && email.charAt(i) > email.charAt(i + 1)) {
                 isEmail = true;
             }
         }
-        System.out.println(isEmail);
+//        System.out.println(isEmail);
     }
 }
