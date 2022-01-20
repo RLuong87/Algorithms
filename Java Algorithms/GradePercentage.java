@@ -3,10 +3,12 @@ package com.company;
 public class GradePercentage {
 
     /*
+    https://edabit.com/challenge/BxnxYJGQ9MMQn2EfR
+
     This code is a direct translation from the Python version of this challenge to a Java version.
     However, because of the differences between the languages and how they function, the Java code is much harder to understand
 
-    For example, the short, easy to read statment in Python int(userScore[:-1])
+    For example, the short, easy to read statement in Python int(userScore[:-1])
     becomes Integer.parseInt(userScore.substring(0,userScore.length()) in Java.
 
     END TRANSLATOR'S NOTE
@@ -29,12 +31,14 @@ public class GradePercentage {
     Feel free to declutter and refactor code if it helps!
      */
 
-    public static String gradePercentage(String userScore, String passScore){
+    public static String gradePercentage(String userScore, String passScore) {
         String s = "";
-        if (Integer.parseInt(userScore.substring(0,userScore.length())) <= Integer.parseInt(passScore.substring(0,passScore.length()))){
+        userScore = userScore.replaceAll("\\D+", "");
+        passScore = passScore.replaceAll("\\D+", "");
+
+        if (Integer.parseInt(userScore) >= Integer.parseInt(passScore)) {
             s += "PASSED";
-        }
-        if (Integer.parseInt(userScore.substring(0,userScore.length())) >= Integer.parseInt(passScore.substring(0,passScore.length()))){
+        }else if (Integer.parseInt(userScore) <= Integer.parseInt(passScore)) {
             s += "FAILED";
         }
         return "You " + s + " the Exam";
@@ -42,6 +46,14 @@ public class GradePercentage {
 
     public static void main(String[] args) {
 
-        System.out.println(gradePercentage());
+        System.out.println(gradePercentage("85%", "85%"));
+        System.out.println(gradePercentage("99%", "85%"));
+        System.out.println(gradePercentage("65%", "85%"));
+
+        String score = "85%", pscore = "85%";
+        score = score.replaceAll("\\D+", "");
+        pscore = pscore.replaceAll("\\D+", "");
+        int num1 = Integer.parseInt(score), num2 = Integer.parseInt(pscore);
+
     }
 }
