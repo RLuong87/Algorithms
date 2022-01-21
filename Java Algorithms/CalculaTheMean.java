@@ -20,12 +20,12 @@ public class CalculaTheMean {
      */
 
     public static double mean(int[] nums) {
-        int sum = 0;
+        double sum = 0;
 
         for (int num : nums) {
             sum += num;
         }
-        return (double) sum / nums.length;
+        return (double) Math.round(sum / nums.length * 100)/100;
     }
 
     public static void main(String[] args) {
