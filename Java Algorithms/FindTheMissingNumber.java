@@ -26,12 +26,13 @@ public class FindTheMissingNumber {
     */
 
     public static int missingNum(int[] nums) {
-
+        
+        int sum = ((nums.length + 1) * (nums.length + 2)) / 2;
+        Arrays.sort(nums);
         for (int i = 0; i < nums.length; i++) {
-
+            sum -= nums[i];
         }
-
-        return 0;
+        return sum;
     }
 
     public static void main(String[] args) {
