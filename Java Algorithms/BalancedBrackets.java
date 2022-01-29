@@ -17,9 +17,6 @@ import static java.util.stream.Collectors.*;
 public class BalancedBrackets {
 
     /*
-    ATTENTION CLIFF: THIS IS NOT A WORKING SOLUTION!
-
-
      * Complete the 'isBalanced' function below.
      *
      * The function is expected to return a STRING.
@@ -49,38 +46,26 @@ public class BalancedBrackets {
 
     public static String isBalanced(String s) {
 
-        Stack<String> balanced = new Stack<>();
-        String[] splitStr = s.split("");
+        Stack<Character> balanced = new Stack<>();
 
-        for (int i = 0; i < splitStr.length; i++) {
-
-            if (splitStr[i].equals("{") || splitStr[i].equals("[") || splitStr[i].equals("(")) {
-                balanced.push(splitStr[i]);
-            }
-        }
-
-        System.out.println(Arrays.toString(splitStr));
-        for (int i = 0; i < splitStr.length; i++) {
-            if (!balanced.isEmpty()) {
-                if (balanced.peek().equals("(") && splitStr[i].equals(")")) {
-                    System.out.println("Before pop: " + balanced);
-                    balanced.pop();
-                    System.out.println("After pop: " + balanced);
-                } else if (balanced.peek().equals("[") && splitStr[i].equals("]")) {
-                    System.out.println("Before pop: " + balanced);
-                    balanced.pop();
-                    System.out.println("After pop: " + balanced);
-                } else if (balanced.peek().equals("{") && splitStr[i].equals("}")) {
-                    System.out.println("Before pop: " + balanced);
-                    balanced.pop();
-                    System.out.println("After pop: " + balanced);
+        for (char c : s.toCharArray()) {
+            if (c == '{' || c == '[' || c == '(') {
+                balanced.push(c); // Push all the opening brackets into the stack
+            } else {
+                if (balanced.empty()) { // Check if the stack is empty if there were opening brackets detected
+                    return "NO"; // If there are no opening brackets, return no
+                } else {
+                    if (balanced.peek() == '(' && c == ')' || balanced.peek() == '[' && c == ']' || balanced.peek() == '{' && c == '}') {
+                        balanced.pop();
+                    } else {
+                        return "NO";
+                    }
                 }
             }
-            if (balanced.isEmpty()) {
-                return "YES";
-            }
         }
-        System.out.println(balanced);
+        if (balanced.empty()) {
+            return "YES";
+        }
         return "NO";
     }
 
