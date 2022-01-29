@@ -53,7 +53,7 @@ public class BalancedBrackets {
                 balanced.push(c); // Push all the opening brackets into the stack
             } else {
                 if (balanced.empty()) { // Check if the stack is empty, if there were no opening brackets detected
-                    return "NO"; // If there are no opening brackets, return no
+                    return "NO"; // If there are no opening brackets because the string started with a closing bracket, return no
                 } else {
                     if (balanced.peek() == '(' && c == ')' || balanced.peek() == '[' && c == ']' || balanced.peek() == '{' && c == '}') {
                         balanced.pop();
