@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Stack;
+
 public class StringSplit {
 
         /*
@@ -22,22 +24,44 @@ public class StringSplit {
 
     public static String split(String str) {
 
+        StringBuilder vowelStr = new StringBuilder();
+        StringBuilder newStr = new StringBuilder();
 
-        return "";
-    }
+        for (char c : str.toCharArray()) {
 
-    public static String isVowel(String s) {
-        String vowel = "";
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                vowelStr.append(c);
+            } else {
+                newStr.append(c);
+            }
+        }
+        vowelStr.append(newStr);
 
-
-
-        return vowel;
+        return vowelStr.toString();
     }
 
     public static void main(String[] args) {
 
-        System.out.println(isVowel("Hello"));
+        System.out.println(split("What's the time?"));
+        System.out.println(split("abcde"));
+        System.out.println(split("Hello"));
 
+
+
+        StringBuilder vowelStr = new StringBuilder();
+        StringBuilder newStr = new StringBuilder();
+//        String s = "What's the time?";
+        String s = "abcde";
+
+        for (char c : s.toCharArray()) {
+
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                vowelStr.append(c);
+            } else {
+                newStr.append(c);
+            }
+        }
+        vowelStr.append(newStr);
+//        System.out.println(vowelStr);
     }
-
 }
